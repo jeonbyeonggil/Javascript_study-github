@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         const print = (event) => {
+            console.log(event) //이벤트 객체: 이벤트가 발생했을때 이벤트가 발생한 요소에 대한 정보가 들어있다.
+            console.log(event.altKey) // alt키를 눌렀을때 true
+            console.log(event.ctrlKey) // ctrl 키를 눌렀을때 true
+            console.log(event.shiftKey) //shift 키를 눌렀을때 true
+            console.log(event.code)
+            // console.log(event.keyCode) 실행 X, 사용 X
+            console.log(event.key) //키보드 값 자체를 준다.
+
+            // 이미 이벤트 리스너가 등록되어 있는지 확인
+            document.removeEventListener('keydown', print)
+         }
+
+         // 문서 전체에 이벤트를 걸었다.
+         document.addEventListener('keydown', print)
+      </script>
+   </body>
+</html>

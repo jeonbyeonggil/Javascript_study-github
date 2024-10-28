@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <script>
+         // 매개변수 a와 b를 받아서 더해가지고 리턴하는 함수
+         // 3가지 방법으로 정의
+         function add(a, b) {
+            return a + b
+         }
+
+         const add = function () {
+            return a + b
+         }
+
+         const add = () => {
+            return a + b
+         }
+
+         //  위에 const add 함수 줄이는 방법
+
+         const add = (a, b) => a + b // a와 b 매개변수 추가
+         const test = () => console.log('test')
+         const objF = () => ({
+            test: 'h1',
+         })
+
+         //  콜백 함수
+         function printNumber(num, callback) {
+            console.log('printNumber() 함수의 num:', num)
+            callback(num)
+         }
+         printNumber(5, function () {
+            console.log('num * num: ', num * num)
+         })
+         printNumber(5, test)
+
+         const array1 = ['a', 'b ', 'c']
+
+         array1.forEach((value, idx, array) => {
+            console.log(value, idx, array)
+         })
+      </script>
+   </body>
+</html>
